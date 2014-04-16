@@ -1,8 +1,10 @@
-console.log((function add(first){
+console.log((function concat(first){
+
     var toArray = function(a){
             return Array.prototype.slice.call(a, 0);
         },
         q = toArray(arguments);
+
     return function fn() {
         if (arguments.length) {
             q = q.concat(toArray(arguments));
@@ -13,4 +15,5 @@ console.log((function add(first){
             });
         }
     };
-})("hello")("there")("how","are","you")());
+
+})("Hello")("there")("how","are","you?")());
